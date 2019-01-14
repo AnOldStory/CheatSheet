@@ -1,0 +1,77 @@
+@import "_variables.scss";
+
+.presenter {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 8px;
+
+  @include animate(slideUp);
+}
+
+.presenter-box {
+  display: block;
+  flex: 1 1 700px;
+}
+
+.presenter-name {
+  margin: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 700;
+  color: $presenter-name;
+}
+
+.presenter-name::after {
+  margin-left: 30px;
+  display: inline-block;
+  content: "";
+  vertical-align: middle;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    $presenter-name-line-start,
+    $presenter-name-line-end
+  );
+  width: 100%;
+}
+.presenter-code {
+  padding: 8px;
+  border-radius: 2px;
+  display: inline-block;
+  background: $presenter-code-background;
+  @include box-shadow;
+}
+.presenter-text {
+  margin: 8px;
+  color: $presenter-text;
+}
+@media (min-width: 1281px) {
+}
+/* ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+/* ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+/* ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  .presenter {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+/* ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px */
+@media (min-width: 320px) and (max-width: 480px) {
+  .presenter {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}

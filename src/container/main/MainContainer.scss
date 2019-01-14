@@ -1,0 +1,110 @@
+@import "_variables.scss";
+
+pre[class*="language-"] {
+  margin: 0;
+}
+
+.main {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 8px;
+
+  @include animate(slideUp);
+}
+
+.main-box {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.main-link {
+  display: block;
+  box-sizing: inherit;
+  padding: 4px;
+  border-radius: 3px;
+  text-decoration: none;
+  flex: 1 1 25%;
+}
+
+.main-link-span {
+  color: $main-link-text;
+  text-align: left;
+  background: linear-gradient(15deg, $main-link-start, $main-link-end);
+  padding: 16px;
+  @include box-shadow;
+}
+
+.main-link-span:hover {
+  color: $main-link-text-hover;
+  background: linear-gradient(
+    15deg,
+    $main-link-start-hover,
+    $main-link-end-hover
+  );
+
+  @include box-shadow;
+}
+.main-text {
+  margin: 8px;
+  color: $presenter-text;
+}
+@media (min-width: 1281px) {
+}
+/* ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px */
+@media (min-width: 1150px) and (max-width: 1280px) {
+}
+@media (min-width: 1025px) and (max-width: 1150px) {
+  .main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main-link {
+    flex: 1 1 33%;
+  }
+}
+/* ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main-link {
+    flex: 1 1 33%;
+  }
+}
+/* ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main-link {
+    flex: 1 1 33%;
+  }
+}
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  .main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main-link {
+    flex: 1 1 50%;
+  }
+}
+/* ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px */
+@media (min-width: 320px) and (max-width: 480px) {
+  .main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main-link {
+    flex: 1 1 50%;
+  }
+}

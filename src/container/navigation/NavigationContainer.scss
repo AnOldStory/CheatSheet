@@ -1,0 +1,55 @@
+@import "_variables.scss";
+
+.navigation {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 200px;
+  //   background: linear-gradient(
+  //     15deg,
+  //     $navigation-background-end 0%,
+  //     $navigation-background-start 50%,
+  //     $navigation-background-end 100%
+  //   );
+
+  // @include box-shadow;
+}
+.navigation-brand {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 1px 0px 1px #cccccc, 0px 1px 1px #eeeeee, 2px 1px 1px #cccccc,
+    1px 2px 1px #eeeeee, 3px 2px 1px #cccccc, 2px 3px 1px #eeeeee,
+    4px 3px 1px #cccccc, 3px 4px 1px #eeeeee, 5px 4px 1px #cccccc,
+    4px 5px 1px #eeeeee, 6px 5px 1px #cccccc, 5px 6px 1px #eeeeee,
+    7px 6px 1px #cccccc;
+  font-size: 50px;
+  color: $navigation-brand;
+  flex: 1;
+  cursor: pointer;
+
+  @include animate(slideUp);
+}
+@media (min-width: 1281px) {
+}
+/* ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+/* ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+/* ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+/* ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px */
+@media (min-width: 320px) and (max-width: 480px) {
+}

@@ -1,0 +1,56 @@
+@import "_variables.scss";
+
+.sidebar {
+  float: left;
+  position: sticky;
+  top: 100px;
+  margin: 30px;
+  width: calc(20% - 60px);
+  list-style: none;
+
+  border-style: solid;
+  border-image: linear-gradient(
+    to right,
+    $sidebar-border-start,
+    $sidebar-border-end
+  );
+  border-image-width: 1px 0 1px 0;
+  border-image-slice: 1;
+  @include animate(slideUp);
+}
+.sidebar-li {
+  cursor: pointer;
+  color: gray;
+}
+.sidebar-li-active {
+  color: black;
+  font-weight: 600;
+}
+@media (min-width: 1281px) {
+}
+/* ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+/* ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+/* ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+}
+/* ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px */
+@media (min-width: 320px) and (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+}
