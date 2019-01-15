@@ -15,6 +15,7 @@ $navigation-brand: #63afe6;
 $sidebar-border-start: $gradient1-start;
 $sidebar-border-end: $gradient1-end;
 
+$presenter-brand: rgb(98, 0, 255);
 $presenter-name: rgba(134, 83, 216, 0.952);
 $presenter-name-line-start: $gradient1-start;
 $presenter-name-line-end: $gradient1-end;
@@ -27,6 +28,9 @@ $main-link-text: white;
 $main-link-start-hover: darken($main-link-start, 12);
 $main-link-end-hover: darken($main-link-end, 12);
 $main-link-text-hover: darken($main-link-text, 12);
+
+$sidebar-li: gray;
+$sidebar-li-active: black;
 
 $brand-color: #029bca;
 $brand-color-darken: darken($brand-color, 12);

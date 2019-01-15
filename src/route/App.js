@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import NavigationContainer from "container/navigation/NavigationContainer";
-import PresenterContainer from "container/presenter/PresenterContainer";
-import SidebarContainer from "container/sidebar/SidebarContainer";
 import MainContainer from "container/main/MainContainer";
+import PresenterContainer from "container/presenter/PresenterContainer";
 
 class App extends Component {
   constructor(props) {
@@ -30,16 +29,13 @@ class App extends Component {
       <BrowserRouter basename="/">
         <>
           <Route path="/" component={NavigationContainer} />
-          <Switch>
-            <Route
-              exact
-              path="/"
-              component={() => (
-                <MainContainer languageList={this.state.languageList} />
-              )}
-            />
-            <SidebarContainer />
-          </Switch>
+          <Route
+            exact
+            path="/"
+            component={() => (
+              <MainContainer languageList={this.state.languageList} />
+            )}
+          />
 
           <Switch>
             <Route path="/:lang" component={PresenterContainer} />

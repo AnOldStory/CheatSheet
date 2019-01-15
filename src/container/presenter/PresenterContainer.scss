@@ -13,8 +13,15 @@
   flex: 1 1 700px;
 }
 
+.presenter-brand {
+  text-align: left;
+  font-size: 25px;
+  color: $presenter-brand;
+  font-weight: 700;
+}
+
 .presenter-name {
-  margin: 8px;
+  margin: 24px 8px 8px 8px;
   white-space: nowrap;
   overflow: hidden;
   font-weight: 700;

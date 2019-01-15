@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import SidebarContainer from "container/sidebar/SidebarContainer";
+
 import CodeViewer from "component/CodeViewer";
 import CodeName from "component/CodeName";
 import CodeText from "component/CodeText";
@@ -14,7 +16,8 @@ class PresenterContainer extends Component {
     super(props);
     this.state = {
       loaded: 0,
-      contents: []
+      contents: [],
+      title: []
     };
   }
   componentDidMount() {
@@ -24,9 +27,19 @@ class PresenterContainer extends Component {
       })
       .then(text => {
         let parser = [];
+        let sidebarparser = [];
         let type = "";
 
-        text = text.split("===");
+        text = text
+          .replace(/-=\[/gi, "title^^^")
+          .replace(/\]=-/gi, "^^^")
+          .replace(/--\[/gi, "code^^^")
+          .replace(/\]--/gi, "~~~")
+          .replace(/----/gi, "^^^")
+          .replace(/=-\[/gi, "text^^^")
+          .replace(/]-=/gi, "^^^");
+
+        text = text.split("^^^");
 
         for (let i = 0; i < text.length; i++) {
           if (i % 2 === 0) {
@@ -34,7 +47,10 @@ class PresenterContainer extends Component {
           } else {
             switch (type) {
               case "title":
-                parser.push(<CodeName name={text[i]} key={i / 2} />);
+                parser.push(
+                  <CodeName name={text[i]} key={i / 2} id={text[i].trim()} />
+                );
+                sidebarparser.push(text[i].trim());
                 break;
               case "code":
                 let temp = text[i].split("~~~");
@@ -57,7 +73,8 @@ class PresenterContainer extends Component {
 
         this.setState({
           loaded: 1,
-          contents: parser
+          contents: parser,
+          title: sidebarparser
         });
       })
       .catch(err => console.log(err));
@@ -65,10 +82,14 @@ class PresenterContainer extends Component {
   render() {
     return (
       <>
-        {this.state.loaded === 0 ? <Loading /> : ""}
+        {this.state.loaded === 0 ? (
+          <Loading />
+        ) : (
+          <SidebarContainer title={this.state.title} />
+        )}
         <div className="presenter">
           <div className="presenter-box">
-            redux.route.path : {this.props.path}
+            <div className="presenter-brand">{this.props.path} </div>
             {this.state.contents.map(lang => {
               return lang;
             })}

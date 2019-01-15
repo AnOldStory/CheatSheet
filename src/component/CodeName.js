@@ -1,7 +1,11 @@
 import React from "react";
 
-const Counter = ({ name }) => {
-  return <div className="presenter-name">{name}</div>;
+const Counter = ({ name, id }) => {
+  return (
+    <div className="presenter-name" id={id}>
+      {name}
+    </div>
+  );
 };
 
 export default Counter;

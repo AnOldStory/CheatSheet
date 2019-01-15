@@ -18,12 +18,13 @@
   border-image-slice: 1;
   @include animate(slideUp);
 }
-.sidebar-li {
+.sidebar-li > a {
   cursor: pointer;
-  color: gray;
+  text-decoration: none;
+  color: $sidebar-li;
 }
-.sidebar-li-active {
-  color: black;
+.sidebar-li-active > a {
+  color: $sidebar-li-active;
   font-weight: 600;
 }
 @media (min-width: 1281px) {
