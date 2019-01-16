@@ -41,9 +41,9 @@ class PresenterContainer extends Component {
           .replace(/----/gi, "^^^")
           .replace(/=-\[/gi, "text^^^")
           .replace(/]-=/gi, "^^^")
-          .replace(/-=>/, "link^^^")
-          .replace(/<=-/, "~~~")
-          .replace(/-><-/, "^^^")
+          .replace(/-=>/gi, "link^^^")
+          .replace(/<=-/gi, "~~~")
+          .replace(/-><-/gi, "^^^")
           .split("^^^");
 
         for (let i = 0; i < text.length; i++) {
