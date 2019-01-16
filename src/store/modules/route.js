@@ -6,7 +6,7 @@ const SET = "route/SET";
 export const set = createAction(SET, value => value);
 
 const initialState = Map({
-  path: "C"
+  path: "Regexp"
 });
 
 export default handleActions(

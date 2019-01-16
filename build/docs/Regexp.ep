@@ -1,0 +1,50 @@
+-=[Syntax]=-
+
+
+--[markup]--
+/pattern/flag
+^a : a로 시작
+a$ : a로 끝남
+
+----
+
+
+=-[
+EOF
+]-=
+
+-=[In Javascript]=-
+=-[
+Used at : exec, text, match, search, replace, split
+]-=
+--[javascript]--
+regexObj.exec(str) // regexObj
+regexObj.test(str) // true,false
+str.match(regexp) // array
+str.search(regexp) // index
+str.replace(regexp, newSubStr|function) // replaced str
+str.split([separator[, limit]]) // array
+----
+
+-=[In Python]=-
+
+=-[
+need to import re (regular expression) module
+Used at : match, search, findall, finditer
+
+]-=
+
+-=>More<=-
+https://nachwon.github.io/regular-expressions/
+-><-
+
+--[python]--
+import re
+regexObj = re.compile('regexp') #can make obj
+regexObj.match(str) #until not match
+regexObj.search(str) #first match
+regexObj.findall(str) #all match list
+regexObj.finditer(str) #all match iterator
+----
+
+

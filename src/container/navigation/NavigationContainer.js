@@ -12,7 +12,7 @@ class NavigationContainer extends Component {
   }
   render() {
     return (
-      <div className="navigation">
+      <div className="navigation" id="Top">
         <div className="navigation-brand" onClick={this.handleMain}>
           <strong>Cheat Sheet</strong>
         </div>

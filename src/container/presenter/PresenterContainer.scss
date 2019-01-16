@@ -44,13 +44,47 @@
 .presenter-code {
   padding: 8px;
   border-radius: 2px;
-  display: inline-block;
   background: $presenter-code-background;
   @include box-shadow;
 }
 .presenter-text {
   margin: 8px;
+  white-space: pre-wrap;
   color: $presenter-text;
+}
+.presenter-link {
+  margin: 0px 8px 8px 8px;
+}
+.presenter-link > a {
+  display: inline-block;
+  color: $main-link-text;
+  text-decoration: none;
+  text-align: left;
+  background: linear-gradient(
+    15deg,
+    $presenter-link-start,
+    $presenter-link-end
+  );
+  padding: 8px;
+  @include box-shadow;
+}
+.presenter-link > a:hover {
+  color: $main-link-text-hover;
+  background: linear-gradient(
+    15deg,
+    $presenter-link-start-hover,
+    $presenter-link-end-hover
+  );
+}
+.presenter-top > a {
+  position: fixed;
+  text-align: center;
+  right: 20px;
+  bottom: 20px;
+  height: 20px;
+  width: 20px;
+  border: 0px solid black;
+  border-radius: 50%;
 }
 @media (min-width: 1281px) {
 }
@@ -76,7 +110,7 @@
 }
 /* ##Device = Most of the Smartphones Mobiles (Portrait)
     ##Screen = B/w 320px to 479px */
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .presenter {
     margin-left: 5%;
     margin-right: 5%;

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Counter = ({ text }) => {
-  return <pre className="presenter-text">{text}</pre>;
+  return <div className="presenter-text">{text}</div>;
 };
 
 export default Counter;

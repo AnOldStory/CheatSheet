@@ -15,13 +15,12 @@ class MainLink extends Component {
   };
   render() {
     return (
-      <Link className="main-link" to={this.props.language}>
-        <div
-          className="main-link-span"
-          onClick={this.handleSet.bind(this, this.props.language)}
-        >
-          {this.props.language}
-        </div>
+      <Link
+        className="main-link"
+        to={this.props.language}
+        onClick={this.handleSet.bind(this, this.props.language)}
+      >
+        <div className="main-link-span">{this.props.language}</div>
       </Link>
     );
   }

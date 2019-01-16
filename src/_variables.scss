@@ -21,6 +21,10 @@ $presenter-name-line-start: $gradient1-start;
 $presenter-name-line-end: $gradient1-end;
 $presenter-code-background: #f8f8f8;
 $presenter-text: rgb(5, 0, 78);
+$presenter-link-start: #9574ca;
+$presenter-link-end: #b09ad3;
+$presenter-link-start-hover: darken($presenter-link-start, 12);
+$presenter-link-end-hover: darken($presenter-link-end, 12);
 
 $main-link-start: #9574ca;
 $main-link-end: #b09ad3;

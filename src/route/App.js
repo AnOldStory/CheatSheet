@@ -20,13 +20,13 @@ class App extends Component {
         "Node.js",
         "Python",
         "React",
-        "Regex"
+        "Regexp"
       ]
     };
   }
   render() {
     return (
-      <BrowserRouter basename="/">
+      <BrowserRouter basename="/CheatSheet">
         <>
           <Route path="/" component={NavigationContainer} />
           <Route
