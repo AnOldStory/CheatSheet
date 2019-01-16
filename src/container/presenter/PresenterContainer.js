@@ -53,7 +53,11 @@ class PresenterContainer extends Component {
             switch (type) {
               case "title":
                 parser.push(
-                  <CodeName name={text[i]} key={i / 2} id={text[i].trim()} />
+                  <CodeName
+                    name={text[i].trim()}
+                    key={i / 2}
+                    id={text[i].trim()}
+                  />
                 );
                 sidebarparser.push(text[i].trim());
                 break;
@@ -68,7 +72,7 @@ class PresenterContainer extends Component {
                 );
                 break;
               case "text":
-                parser.push(<CodeText text={text[i]} key={i / 2} />);
+                parser.push(<CodeText text={text[i].trim()} key={i / 2} />);
                 break;
               case "link":
                 temp = text[i].split("~~~");
