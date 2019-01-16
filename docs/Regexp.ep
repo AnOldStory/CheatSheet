@@ -5,13 +5,7 @@
 /pattern/flag
 ^a : a로 시작
 a$ : a로 끝남
-
 ----
-
-
-=-[
-EOF
-]-=
 
 -=[In Javascript]=-
 =-[
@@ -31,7 +25,6 @@ str.split([separator[, limit]]) // array
 =-[
 need to import re (regular expression) module
 Used at : match, search, findall, finditer
-
 ]-=
 
 -=>More<=-
@@ -46,5 +39,4 @@ regexObj.search(str) #first match
 regexObj.findall(str) #all match list
 regexObj.finditer(str) #all match iterator
 ----
-
 
