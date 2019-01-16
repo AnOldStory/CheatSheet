@@ -1,16 +1,82 @@
 -=[Syntax]=-
 
-
 --[markup]--
 /pattern/flag
-^a : a로 시작
-a$ : a로 끝남
+----
+
+=-[
+Greedy (Default)
+선택 가능한 것 중에 가장 큰거
+=> 조건에 맞지 않을 때 까지
+
+Lazy 
+선택 가능한 것 중에 가장 작은거
+=> 조건에 일치 할 때 까지
+]-=
+
+-=[Meta Character]=-
+
+--[markup]--
+. : 개행제외 모든 문자(딱 한글자)
+| : 또는
+[] : 안에 있는 것 각각 일치
+[^] : 안에 있는 것 각각 제외
+() : 안에 있는 것 그대로 일치
+- : 범위
+\ : 이스케이프 문자
+----
+
+-=[Quantifier]=-
+
+--[markup]--
+a* : a가 0회 이상 (Greedy)
+a*? : a가 0회 이상 (Lazy)
+
+a+ : a가 1회 이상 (Greedy)
+a+? : a가 1회 이상 (Lazy)
+
+a? : a가 0회 또는 1회
+
+a{n} : a가 n번 일치
+a{m,n} : a가 m번 에서 n번 까지 일치
+
+a{n,} : a가 n번 이상 (Greedy)
+a{n,}? : a가 n번 이상 (Lazy)
+----
+
+-=>More<=-
+https://docs.microsoft.com/ko-kr/dotnet/standard/base-types/regular-expression-language-quick-reference
+-><-
+
+-=[Anchor]=-
+
+--[markup]--
+^a : a로 줄 시작
+\Aa : a로 문자열 시작 (JavaScript, POSIX, XML, XPath 미지원)
+a$ : a로 행 끝
+a\Z : a로 문자열 끝 (JavaScript, POSIX, XML, XPath 미지원)
+\b : 문자와 공백 사이 
+\B : 문자와 공백 아닌 것 사이
+----
+
+-=>More<=-
+https://www.regular-expressions.info/anchors.html#az
+-><-
+
+-=[Flag]=-
+
+--[markup]--
+i : 대소문자 구분 (Ignore case)
+g : 모든 패턴 (Global)
+m : 여러줄 허용 (Multi line)
 ----
 
 -=[In Javascript]=-
+
 =-[
 Used at : exec, text, match, search, replace, split
 ]-=
+
 --[javascript]--
 regexObj.exec(str) // regexObj
 regexObj.test(str) // true,false
@@ -23,7 +89,7 @@ str.split([separator[, limit]]) // array
 -=[In Python]=-
 
 =-[
-need to import re (regular expression) module
+* import re (regular expression) 필수
 Used at : match, search, findall, finditer
 ]-=
 
@@ -39,4 +105,3 @@ regexObj.search(str) #first match
 regexObj.findall(str) #all match list
 regexObj.finditer(str) #all match iterator
 ----
-
