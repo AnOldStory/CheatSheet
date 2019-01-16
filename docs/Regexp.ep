@@ -20,10 +20,27 @@ Lazy
 . : 개행제외 모든 문자(딱 한글자)
 | : 또는
 [] : 안에 있는 것 각각 일치
-[^] : 안에 있는 것 각각 제외
+^a : a를 제외
 () : 안에 있는 것 그대로 일치
 - : 범위
 \ : 이스케이프 문자
+
+----
+
+-=[Character Escape]=-
+
+--[markup]--
+^ $ . * + ? = ! : | \ / ( ) [ ] { }=> 이스케이프 필수
+\d : 숫자 (digit) [0-9]
+\D : 숫자가 아닌것 (non digit)
+\s : 공백 (space) [ \t\n\r\f\v]
+\S : 공백이 아닌것 (non space)
+\t : 탭 (tab) 
+\v : 수직 탭 (vertical tab)
+\w : 알파벳 숫자 언더바 (word) [a-zA-Z0-9_]
+\W : 알파벳 숫자 언더바가 아닌거 (non word)
+\0 : NULL
+\r : 캐리지 리턴
 ----
 
 -=[Quantifier]=-
@@ -35,10 +52,14 @@ a*? : a가 0회 이상 (Lazy)
 a+ : a가 1회 이상 (Greedy)
 a+? : a가 1회 이상 (Lazy)
 
-a? : a가 0회 또는 1회
+a? : a가 0회 또는 1회 (Greedy)
+a?? : a가 0회 또는 1회 (Lazy)
 
-a{n} : a가 n번 일치
-a{m,n} : a가 m번 에서 n번 까지 일치
+a{n} : a가 n번 일치 (Greedy)
+a{n} : a가 n번 일치 (Lazy)
+
+a{m,n} : a가 m번 에서 n번 까지 일치 (Greedy)
+a{m,n} : a가 m번 에서 n번 까지 일치 (Lazy)
 
 a{n,} : a가 n번 이상 (Greedy)
 a{n,}? : a가 n번 이상 (Lazy)
@@ -54,7 +75,8 @@ https://docs.microsoft.com/ko-kr/dotnet/standard/base-types/regular-expression-l
 ^a : a로 줄 시작
 \Aa : a로 문자열 시작 (JavaScript, POSIX, XML, XPath 미지원)
 a$ : a로 행 끝
-a\Z : a로 문자열 끝 (JavaScript, POSIX, XML, XPath 미지원)
+a\Z : a로 문자열 끝 \n을 찾음 (JavaScript, POSIX, XML, XPath 미지원)
+a\z : a로 문자열 끝 \n을 찾지 않음(JavaScript, POSIX, XML, XPath 미지원)
 \b : 문자와 공백 사이 
 \B : 문자와 공백 아닌 것 사이
 ----
@@ -66,9 +88,40 @@ https://www.regular-expressions.info/anchors.html#az
 -=[Flag]=-
 
 --[markup]--
-i : 대소문자 구분 (Ignore case)
+i : 대소문자 구분안함 (Ignore case)
 g : 모든 패턴 (Global)
 m : 여러줄 허용 (Multi line)
+s : 한줄 허용 (Single line)
+----
+
+-=[Look Around]=-
+
+--[markup]--
+a(?= b) : a 다음 b가 나오는 a (positive lookahead)
+a(?! b) : a 다음 b가 없는 a (negative lookahead)
+(?<= a)b: a가 앞에 있는 b (positive lookahead)
+(?<! a)b: a가 앞에 없는 b (negative lookahead)
+----
+
+-=[Back Reference]=-
+
+--[markup]--
+(regexp)에 저장된 임시 버퍼 참조 \1
+?(Back Reference)true|false 로도 사용가능
+----
+
+-=>More<=-
+http://exynoa.tistory.com/204
+-><-
+
+-=[Pattern Modifier]=-
+
+--[markup]--
+\l : 다음 글자 소문자
+\L : \E까지 소문자
+\u : 다음 글자 대문자
+\U : \E까지 대문자
+\E : 문자 변환 종결
 ----
 
 -=[In Javascript]=-
@@ -93,9 +146,6 @@ str.split([separator[, limit]]) // array
 Used at : match, search, findall, finditer
 ]-=
 
--=>More<=-
-https://nachwon.github.io/regular-expressions/
--><-
 
 --[python]--
 import re
@@ -105,3 +155,14 @@ regexObj.search(str) #first match
 regexObj.findall(str) #all match list
 regexObj.finditer(str) #all match iterator
 ----
+
+-=[Sites]=-
+
+
+-=>정규식 테스트 사이트<=-
+https://regexr.com/
+-><-
+
+-=>자동 변환 사이트<=-
+http://txt2re.com/index.php3
+-><-
