@@ -1,0 +1,21 @@
+-=[Install]=-
+
+--[bash]--
+$ yarn add express-generator -g
+$ yarn global add windows-build-tools 
+$ express -v ejs -c sass -g -f myapp
+$ cd myapp
+$ yarn
+----
+
+=-[
+If yarn이 없다면 => npm으로 
+windows-build-tools는 sass를 위해
+]-=
+
+-=[Modules]=-
+
+=-[
+request : http 통신 및 크롤링
+helmet : http header 도움
+]-=
