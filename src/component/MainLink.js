@@ -5,10 +5,6 @@ import { bindActionCreators } from "redux";
 import * as routeActions from "store/modules/route";
 
 class MainLink extends Component {
-  constructor(props) {
-    super(props);
-    this.handleSet = this.handleSet.bind(this);
-  }
   handleSet = (path, event) => {
     const { RouteActions } = this.props;
     RouteActions.set(path);
