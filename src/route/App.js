@@ -15,6 +15,7 @@ class App extends Component {
         "C++",
         "CSS",
         "Java",
+        "Linux",
         "Machine Learning",
         "Markdown",
         "Node.js",
@@ -23,6 +24,7 @@ class App extends Component {
         "Regexp"
       ]
     };
+    // ABCDE FGHIJ KLMNO PQRST UVWXY Z
   }
   render() {
     return (
