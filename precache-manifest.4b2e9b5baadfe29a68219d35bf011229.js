@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/CheatSheet/static/js/runtime~main.efeaf053.js"
   },
   {
-    "revision": "b04c6d65479defdaeb44",
-    "url": "/CheatSheet/static/js/main.b04c6d65.chunk.js"
+    "revision": "51f1b9866f937dd6207b",
+    "url": "/CheatSheet/static/js/main.51f1b986.chunk.js"
   },
   {
     "revision": "0e3c136b1042f6333a05",
     "url": "/CheatSheet/static/js/1.0e3c136b.chunk.js"
   },
   {
-    "revision": "b04c6d65479defdaeb44",
-    "url": "/CheatSheet/static/css/main.d6782cc8.chunk.css"
+    "revision": "51f1b9866f937dd6207b",
+    "url": "/CheatSheet/static/css/main.055b7a85.chunk.css"
   },
   {
-    "revision": "207441460486bf9227693668d0ba9f87",
+    "revision": "1b28099a51f8d10535d748b7510a5858",
     "url": "/CheatSheet/index.html"
   }
 ];

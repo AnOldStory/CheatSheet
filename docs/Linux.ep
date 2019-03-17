@@ -1,0 +1,41 @@
+-=[Command]=-
+
+--[bash]--
+pwd #현재 디렉토리 위치
+----
+
+-=[Tip]=-
+
+=-[
+패키지 저장장소 /etc/apt/sources.list
+]-=
+
+-=[Microsoft Store Ubuntu]=-
+
+=-[
+VSCode에서 설정 변경 (실행 단축키:  Ctrl + ` )
+]-=
+
+--[bash]--
+terminal.integrated.shell.windows = C:\\windows\\System32\\bash.exe
+----
+
+=-[
+.bashrc 파일에 추가
+]-=
+
+--[bash]--
+export DISPLAY=:0
+export LIBGL_ALWAYS_INDIRECT=1
+export NO_AT_BRIDGE=1
+----
+
+=-[
+dbus 재시작 및 VSCode실행
+]-=
+
+--[bash]--
+exec dbus-run-session --bash
+sudo service dbus start
+----
+
