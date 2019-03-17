@@ -1,10 +1,8 @@
 @import "_variables.scss";
-
 .presenter {
   margin-left: 20%;
   margin-right: 20%;
   padding: 8px;
-
   @include animate(slideUp);
 }
 
@@ -41,6 +39,7 @@
   );
   width: 100%;
 }
+
 .presenter-code {
   margin: 8px;
   padding: 8px;
@@ -48,14 +47,18 @@
   background: $presenter-code-background;
   @include box-shadow;
 }
+
 .presenter-text {
   margin: 8px;
   white-space: pre-wrap;
   color: $presenter-text;
 }
+
 .presenter-link {
   margin: 0px 8px 8px 8px;
+  user-select: none;
 }
+
 .presenter-link > a {
   display: block;
   color: $main-link-text;
@@ -70,6 +73,7 @@
   border-radius: 20px;
   @include box-shadow;
 }
+
 .presenter-link > a:hover {
   color: $main-link-text-hover;
   background: linear-gradient(
@@ -78,6 +82,7 @@
     $presenter-link-end-hover
   );
 }
+
 .presenter-top > a {
   position: fixed;
   text-align: center;
@@ -88,30 +93,41 @@
   border: 0px solid black;
   border-radius: 50%;
 }
+
 @media (min-width: 1281px) {
 }
+
 /* ##Device = Laptops, Desktops
     ##Screen = B/w 1025px to 1280px */
+
 @media (min-width: 1025px) and (max-width: 1280px) {
 }
+
 /* ##Device = Tablets, Ipads (portrait)
     ##Screen = B/w 768px to 1024px */
+
 @media (min-width: 768px) and (max-width: 1024px) {
 }
+
 /* ##Device = Tablets, Ipads (landscape)
     ##Screen = B/w 768px to 1024px */
+
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 }
+
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
     ##Screen = B/w 481px to 767px */
+
 @media (min-width: 481px) and (max-width: 767px) {
   .presenter {
     margin-left: 5%;
     margin-right: 5%;
   }
 }
+
 /* ##Device = Most of the Smartphones Mobiles (Portrait)
     ##Screen = B/w 320px to 479px */
+
 @media (max-width: 480px) {
   .presenter {
     margin-left: 5%;
