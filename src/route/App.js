@@ -19,6 +19,7 @@ class App extends Component {
         "Machine Learning",
         "Markdown",
         "Node.js",
+        "OCaml",
         "Python",
         "React",
         "Regexp"
