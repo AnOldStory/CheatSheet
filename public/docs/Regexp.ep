@@ -156,6 +156,26 @@ regexObj.findall(str) #all match list
 regexObj.finditer(str) #all match iterator
 ----
 
+-=[In Java]=-
+
+=-[
+* import java.util.regex.Pattern;
+import java.util.regex.Matcher; 필수
+Used at : matches (T/F), replaceAll(str), Pattern (group), Matcher(group)
+]-=
+
+--[Java]--
+Pattern pattern = Pattern.complie("regexp");
+Matcher matcher = pattern.matcher(str);
+while(matcher.find()){
+  matcher.group(int|str); # each match
+}
+matcher.replaceAll(str);
+----
+-=>Document<=-
+https://docs.oracle.com/javase/10/docs/api/java/util/regex/Matcher.html
+-><-
+
 -=[Sites]=-
 
 
