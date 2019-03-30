@@ -1,0 +1,32 @@
+-=[Install]=-
+
+--[bash]--
+$ yarn add create-react-app
+$ create-react-app myapp
+$ yarn start
+----
+
+=-[
+If yarn이 없다면 => npm으로 
+절대 경로로 import 하고싶을경우 package.json과 같은 경로에 
+]-=
+
+--[bash]--
+NODE_PATH=src/
+----
+
+=-[
+를 쓰면된다
+]-=
+
+-=[Modules]=-
+
+=-[
+node-sass : sass 지원
+(windows-build-tools 필요)
+react-router-dom : router 지원
+react-prism : prismjs 지원
+react-scrollspy : 부트스트랩 scrollspy 지원
+redux : redux 지원
+]-=
+
