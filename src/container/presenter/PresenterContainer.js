@@ -13,7 +13,7 @@ import CodeLink from "component/CodeLink";
 import Loading from "component/Loading";
 
 import "./PresenterContainer.scss";
-import { bindActionCreators } from "../../../../../../AppData/Local/Microsoft/TypeScript/3.3/node_modules/redux";
+import { bindActionCreators } from "redux";
 
 class PresenterContainer extends Component {
   constructor(props) {
