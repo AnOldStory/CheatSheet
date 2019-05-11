@@ -1,7 +1,7 @@
 import React from "react";
 import { PrismCode } from "react-prism";
 
-const Counter = ({ type, code }) => {
+const CodeViewer = ({ type, code }) => {
   return (
     <div className="presenter-code">
       <PrismCode component="pre" className={"language-" + type}>
@@ -11,4 +11,4 @@ const Counter = ({ type, code }) => {
   );
 };
 
-export default Counter;
+export default CodeViewer;

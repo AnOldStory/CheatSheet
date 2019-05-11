@@ -1,7 +1,7 @@
 import React from "react";
 
-const Counter = ({ text }) => {
+const CodeText = ({ text }) => {
   return <div className="presenter-text">{text}</div>;
 };
 
-export default Counter;
+export default CodeText;

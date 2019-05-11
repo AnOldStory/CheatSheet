@@ -1,6 +1,6 @@
 import React from "react";
 
-const Counter = ({ name, href, id }) => {
+const CodeLink = ({ name, href, id }) => {
   return (
     <div className="presenter-link">
       <a href={href} id={id}>
@@ -10,4 +10,4 @@ const Counter = ({ name, href, id }) => {
   );
 };
 
-export default Counter;
+export default CodeLink;

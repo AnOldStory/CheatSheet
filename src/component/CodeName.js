@@ -1,6 +1,6 @@
 import React from "react";
 
-const Counter = ({ name, id }) => {
+const CodeName = ({ name, id }) => {
   return (
     <div className="presenter-name" id={id}>
       {name}
@@ -8,4 +8,4 @@ const Counter = ({ name, id }) => {
   );
 };
 
-export default Counter;
+export default CodeName;
