@@ -1,5 +1,9 @@
 -=[Install]=-
 
+-=>Install<=-
+https://github.com/nodesource/distributions#debinstall
+-><-
+
 --[bash]--
 $ yarn add express-generator -g
 $ yarn global add windows-build-tools 
