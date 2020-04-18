@@ -35,7 +35,54 @@ dbus 재시작 및 VSCode실행
 ]-=
 
 --[bash]--
-exec dbus-run-session --bash
-sudo service dbus start
+$ exec dbus-run-session --bash
+$ sudo service dbus start
 ----
 
+
+-=[Raspberry Pi]=-
+
+=-[
+Ubuntu Server 19 Wifi 설정 
+]-=
+
+--[bash]--
+$ sudo vi /etc/netplan/wireless.yaml
+----
+
+--[markup]--
+network:
+  version: 2
+  renderer: networkd
+  wifis:
+    wlan0:
+      dhcp4: yes
+      dhcp6: no
+      access-points:
+        "ssid":
+          password: "pwd"
+----
+
+--[bash]--
+$ sudo netplan apply
+$ sudo reboot
+----
+
+=-[
+rpi4 이상일때 펌웨어 강제로 업데이트 필요
+/lib/firmware/brcm 에 씌워넣기
+]-=
+
+-=>펌웨어 위치<=-
+https://community.cypress.com/docs/DOC-19000
+-><-
+
+--[bash]--
+$ sudo rmmod brcmfmac
+$ sudo mv "펌웨어폴더"/* /lib/firmware/brcm
+$ sudo modprobe brcmfmac
+----
+
+=-[
+  /etc/default/crda에 REGDOMAIN=KR로 설정해야 5G잡힌다.
+]-=
