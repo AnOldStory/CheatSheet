@@ -1,11 +1,20 @@
 CheatSheet 
 ==========
 
-Description
------------
-> This repository was made for my personal cheatsheet. You can check the result at [HERE](https://anoldstory.github.io/CheatSheet/). Everything is made subjectively. Therefore, use it simply as a reference.
-
+<p align="center">
+    <img src="https://img.shields.io/badge/version-v1.0.0-orange" alt="version"/>
+    <a href="https://nodejs.org/ko">
+    <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/FrontEnd-React-9cf.svg" alt="React"></a>
+</p>
  
+Introduction
+-----------
+> my personal cheatsheet. 
+
+Demo
+----
+[HERE](https://anoldstory.github.io/CheatSheet/)
+
 TODO
 ----
 - [ ] Algorithm
